@@ -199,7 +199,13 @@ c {
 </head>
 
 <body>
-
+<script type="text/javascript">
+    var answer = prompt("What is my last name?");
+    if (!answer || answer.toLowerCase() !== "park") {
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>Access Denied</h2>";
+        throw new Error("Unauthorized access");
+    }
+</script>
     <br>
     <center>
     <p>
@@ -399,4 +405,5 @@ c {
 </body>
 
 </html>
+
 
